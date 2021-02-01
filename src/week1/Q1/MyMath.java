@@ -1,17 +1,12 @@
 package week1.Q1;
 
 public class MyMath {
+    //post correction class
     public static int smallest(int a,int b,int c){
-        int d;
-        if(a < b)
-            d = a;
-        else
-            d = b;
 
-        if(d < c)
-            return d;
-        else
-            return c;
+        int d = (a < b)? a : b;
+
+        return (d < c)? d : c;
     }
 
     public static int power(int a,int b){
@@ -40,18 +35,18 @@ public class MyMath {
         }
         return total;
     }
-
+    //post correction class
     public static boolean isPrime(int n){
-        if(n == 0) return false;
-        if(n > 0) {
-            for (int i = 2; i < n; i++) {
-                if (n % i == 0) return false;
+        if(n <= 2) return false;
+
+        boolean isPrime = true;
+        int i = 2;
+
+            while(i <= (n/2) && isPrime){
+                if (n % i == 0)
+                    isPrime = false;
+                i++;
             }
-        }
-        else
-            for (int i = -2; i > n; i--) {
-                if (n % i == 0) return false;
-            }
-        return true;
+        return isPrime;
     }
 }
