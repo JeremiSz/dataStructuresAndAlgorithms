@@ -72,13 +72,16 @@ public class MyMathTest {
         printTest(boolE,boolR);
     }
 
-    private static void printTest(int expected,int result){
+    public static void printTest(int expected,int result){
         System.out.println("E:" + expected + " A:" + result);
     }
-    private static void printTest(double expected,double result){
+    public static void printTest(double expected,double result){
         System.out.println("E:" + expected + " A:" + result);
     }
-    private static void printTest(boolean expected,boolean result){
+    public static void printTest(boolean expected,boolean result){
+        System.out.println("E:" + expected + " A:" + result);
+    }
+    public static void printTest(String expected, String result){
         System.out.println("E:" + expected + " A:" + result);
     }
 }
