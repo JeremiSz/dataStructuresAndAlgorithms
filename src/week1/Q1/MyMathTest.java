@@ -21,7 +21,7 @@ public class MyMathTest {
         expected = (int)Math.pow(1,5);
         printTest(expected,result);
 
-        result = MyMath.power(5,6);;
+        result = MyMath.power(5,6);
         printTest(Math.pow(5,6),result);
 
         result = MyMath.power(77,0);

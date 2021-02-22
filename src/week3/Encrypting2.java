@@ -1,6 +1,5 @@
 package week3;
 
-
 import week1.Q1.MyMathTest;
 
 public class Encrypting2 {
