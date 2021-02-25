@@ -1,8 +1,12 @@
 package week1.Q1;
 
+import javax.swing.*;
+
 public class MyMathTest {
     public static void main(String[] args) {
         int result,expected;
+
+        JOptionPane.showInputDialog("ajkdajd");
         System.out.println("Smallest");
         result = MyMath.smallest(-100,0,100);
         expected = -100;
@@ -70,6 +74,9 @@ public class MyMathTest {
         boolR = MyMath.isPrime(-4);
         boolE = false;
         printTest(boolE,boolR);
+        float test = (float) (4.5/0);
+        System.out.println(test);
+        System.exit(0);
     }
 
     public static void printTest(int expected,int result){

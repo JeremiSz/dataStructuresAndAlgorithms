@@ -7,12 +7,12 @@ public class MyArrayTest {
     @Test
     void testAddingBeyondLimit(){
         int[] array = {};
-        assertEquals(0,MyArrays.insert(array,0,3,4));
+        assertThrows(ArrayIndexOutOfBoundsException.class,() -> MyArrays.insert(array,0,3,4));
     }
     @Test
     void testPositionBeyondLimits(){
         int[] array = {1,2};
-        assertEquals(2,MyArrays.insert(array,2,5,4));
+        assertThrows(ArrayIndexOutOfBoundsException.class,() -> MyArrays.insert(array,2,5,4));
     }
 
     @Test

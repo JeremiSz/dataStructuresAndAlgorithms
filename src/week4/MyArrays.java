@@ -9,8 +9,8 @@ public class MyArrays {
             values[pos] = newElement;
             currentSize++;
         }
-        /*else
-            throw new ArrayIndexOutOfBoundsException();*/
+        else
+            throw new ArrayIndexOutOfBoundsException();
         return currentSize;
     }
 //Week 5

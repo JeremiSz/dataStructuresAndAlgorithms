@@ -1,7 +1,5 @@
 package week4;
 
-import java.util.Random;
-
 public class Deck {
     Card[] cards;
 
@@ -24,6 +22,4 @@ public class Deck {
             cards[i] = temp;
         }
     }
-
-
 }
