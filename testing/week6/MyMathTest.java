@@ -17,4 +17,18 @@ class MyMathTest {
         result = MyMath.factorial(0);
         assertEquals(expected,result);
     }
+
+    @Test
+    void myPow() {
+        double expected = Math.pow(2,4);
+        double actual = MyMath.myPow(2,4);
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    void reverse() {
+        String expected = "olleh";
+        String result = MyMath.reverse("hello");
+        assertEquals(expected,result);
+    }
 }
