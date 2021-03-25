@@ -2,12 +2,21 @@ package week6;
 
 import java.util.Arrays;
 
-public class MyMath {
+public final class MyMath {
+
+    private MyMath(){}
+
     public static int factorial(int num){
-        if(num > 1)
-            num = num * factorial(num - 1);
-        if(num == 0) num = 1;
-        return num;
+        int out;
+        if(num > 1) {
+            out = num * factorial(num - 1);
+        }
+        else if(num == 0) {
+            out = 1;
+        }
+
+        else {out = num;}
+        return out;
     }
 
     public static double myPow(double x, int y){
@@ -18,20 +27,23 @@ public class MyMath {
     }
 
     public static String reverse(String str){
-        int length = str.length() - 1;
-        if(length == 0)
+        final int length = str.length() - 1;
+        if(length == 0) {
             return str;
+        }
         else {
-            String output = reverse(str.substring(0,length));
-            return (str.charAt(length) + output);
+            final String output = reverse(str.substring(0,length));
+            return str.charAt(length) + output;
         }
     }
 
     public static int sum(int[] values){
-        int size = values.length  - 1;
-        if(size == 0)
+        final int size = values.length  - 1;
+        if(size == 0) {
             return values[0];
-        else
-            return values[size] + sum(Arrays.copyOf(values,size));
+        }
+        else {
+            return values[size] + sum(Arrays.copyOf(values, size));
+        }
     }
 }

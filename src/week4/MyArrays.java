@@ -1,5 +1,7 @@
 package week4;
 
+import java.util.Arrays;
+
 public class MyArrays {
     public static int insert(int[] values, int currentSize,int pos,int newElement){
         if(currentSize < values.length && pos < values.length){
@@ -81,4 +83,52 @@ public class MyArrays {
             array[j + 1] = val;
         }
     }
+    //Week8
+    public static void mergeSort(int[] a){
+        if(a.length <= 1) return;
+
+        int[] first = new int[a.length/2];
+        int[] second = new int[a.length - first.length];
+
+        first = Arrays.copyOf(a,first.length);
+        second = Arrays.copyOfRange(a,first.length,a.length);
+
+        mergeSort(first);
+        mergeSort(second);
+
+        merge(first,second,a);
+    }
+
+    private static void merge(int[] a, int[] b, int[] target){
+        int indexA = 0;
+        int indexB = 0;
+        int j = 0;
+
+        while (indexA < a.length && indexB < b.length){
+            if(a[indexA] < b[indexB]){
+                target[j] = a[indexA];
+                indexA++;
+            }
+            else {
+                target[j] = b[indexB];
+                indexB++;
+            }
+            j++;
+        }
+
+        while (indexA < a.length){
+            target[j] = a[indexA];
+            j++;
+            indexA++;
+        }
+
+        while (indexB < b.length){
+            target[j] = b[indexB];
+            j++;
+            indexB++;
+        }
+    }
+
+    //Arrays.sort uses "Dual-pivot Quicksort
+    //https://docs.oracle.com/javase/7/docs/api/java/util/Arrays.html
 }
