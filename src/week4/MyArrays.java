@@ -131,4 +131,42 @@ public class MyArrays {
 
     //Arrays.sort uses "Dual-pivot Quicksort
     //https://docs.oracle.com/javase/7/docs/api/java/util/Arrays.html
+
+    public static void bubbleSort(int[] a){
+        boolean swapped = true;
+        int i = a.length;
+
+        while (i > 1 && swapped){
+            swapped = false;
+            i--;
+
+            for (int j = a.length - 1; j >= a.length - i; j--) {
+                if(a[j] < a[j - 1]){
+                    int temp = a[j];
+                    a[j] = a[j - 1];
+                    a[j - 1] = temp;
+
+                    swapped = true;
+                }
+            }
+        }
+    }
+
+    /*swapped = true;
+    i = values.length;
+    WHILE i > 1 && swapped
+        swapped = false;
+        decrement i
+        FOR j = values.length – 1 DOWNTO values.length - i
+            IF values[j] < values[j - 1]
+                //swap(values[j], values[j - 1])
+                temp = values[j];
+                values[j] = values[j - 1];
+                values[j - 1] = temp;
+
+                swapped = true;
+            ENDIF
+        ENDFOR
+    ENDWHILE
+*/
 }
