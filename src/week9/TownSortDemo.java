@@ -3,7 +3,6 @@ package week9;
 import java.util.Arrays;
 import java.util.Collections;
 
-import java.util.Collections;
 import java.util.ArrayList;
 
 public class TownSortDemo {
@@ -21,7 +20,7 @@ public class TownSortDemo {
         System.out.println("\nSorted List");
         displayArray(towns);
 
-        ArrayList<Town> towns1 = new ArrayList<Town>();
+        ArrayList<Town> towns1 = new ArrayList<>();
 
         towns1.add(new Town("Tralee", "Kerry", 23000));
         towns1.add(new Town("Macroom", "Cork", 3800));
@@ -46,8 +45,8 @@ public class TownSortDemo {
     }
 
     private static void displayArray(Town[] towns) {
-        for (int i = 0; i < towns.length; i++) {
-            System.out.println(towns[i]);
+        for (Town town : towns) {
+            System.out.println(town);
         }
     }
 
